@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"  >
+  <!--  Font Awesome の CDN  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>ウェブページにアクセスした1回目だけ要素を動かすサンプル001</title>
+</head>
+<body>
+
+  <header>
+    <h1>ウェブページにアクセスした1回目だけ要素を動かすサンプル001</h1>
+  </header>
+
+  <div class="well">
+    1回目のアクセスである場合のみ、特定の処理を実行するためのサンプルです。
+  </div>
+
+  <div class="panel panel-success">
+    <div class="panel-heading"><code>sessionStorage</code> を使う方法</div>
+    <div class="panel-body">
+      <p>1回目にアクセスした時だけ、下の四角が動きます。</p>
+      <div id="icon"></div>
+
+      <section>
+        結果：<output id="output" style="display:inline-block"></output>
+      </section>
+
+      <section>
+        <button type="button" id="clearVisited">sessionStorage内の "visited" データをクリアします</button>
+      </section>
+
+      <section style="margin-top:20px;">
+        <h4>メモ</h4>
+        <ul>
+          <li>1回目のアクセス時に、<code>sessionStorage</code> に訪問済みのデータを格納し、それを毎回チェックするだけです。</li>
+          <li><code>sessionStorage</code> なのでこのタブを閉じたら、次回はまた1回目のアクセスとなります。</li>
+          <li>ウェブブラウザに保存されたデータは、ウェブブラウザの開発者ツールでを見ることができます。</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="well">
+    <section>
+      <h4>ソースコードはこちら</h4>
+      <ul>
+        <li><a href="https://github.com/laboradian/waving-element-one-time-sample001">laboradian/waving-element-one-time-sample001</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>参考</h4>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage API - Web APIs | MDN</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <hr>
+  <footer>© 2017 <a href="http://laboradian.com/">Laboradian</a></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="js/main.js" charset="utf-8"></script>
+</body>
+</html>

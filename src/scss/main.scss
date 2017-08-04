@@ -1,0 +1,34 @@
+@import './bootstrap-variables';
+@import './bootstrap-custom';
+
+body {
+  padding: 20px;
+}
+
+section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  //h4:not(:first-child) {
+  //  margin-top: 20px;
+  //}
+}
+
+footer {
+  text-align: right;
+}
+
+#icon {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+
+.shake1 {
+  animation: shake1 0.2s;
+}
+
+@keyframes shake1 {
+  0%   { transform: translate(2px,  0px) rotate(0deg); }
+  50%  { transform: translate(-4px, 0px) rotate(60deg); }
+  100% { transform: translate(2px,  0px) rotate(0deg); }
+}
